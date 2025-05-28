@@ -153,13 +153,13 @@
         const netTotal = filmPrice - taxCredit;
         const annualEnergy = electricBill * 12;
         const annualSavings = annualEnergy * 0.3;
-        const paybackPeriod = (netTotal / annualSavings).toFixed(1);
+        const threeYearSavings = annualSavings * 3;
 
         document.getElementById('results').innerHTML = `
             <span class="highlight">Net Total After Tax Credit: $${netTotal.toFixed(2)}</span>
             Annual Energy Cost: <span style="color:#216c53;">$${annualEnergy.toFixed(2)}</span><br>
             Estimated Annual Savings (30%): <span style="color:#216c53;">$${annualSavings.toFixed(2)}</span><br>
-            Pays for itself in: <span style="color:#216c53;">${paybackPeriod} years</span>
+            3-Year Savings: <span style="color:#216c53;">$${threeYearSavings.toFixed(2)}</span>
         `;
     }
 </script>
